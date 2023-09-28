@@ -1,0 +1,455 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+    /* font-family: 'Hanken Grotesk', sans-serif; */
+    /* 500 , 700 , 800 */
+:root{
+
+    /* ### Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+/* ## Gradients  */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+/* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    Font-size: 18px;
+    background-color:var(--Pale-blue) ;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+.container{
+    min-height: 95.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.detailes-card{
+    height: auto;
+    padding: 30px;
+    border-radius: 23px;
+    background-color:var(--White) ;
+    display: grid;
+    grid-template-columns: 335px 302px;
+    grid-template-rows: repeat(6,auto);
+    overflow: hidden;
+}
+.detailes-card-title{
+    color: var(--Dark-gray-blue);
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 18px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    grid-column: 2/ span 1;
+animation:desktop-detailes-card-title-an 3s ease-in-out 7s;
+animation-fill-mode: backwards;
+}
+.Reaction,
+.Memory,
+.Verbal,
+.Visual,
+.btn{
+    width: 100%;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 2/ span 1;
+    animation: decktop-Reaction-an 4s ease-in-out;
+}
+.Reaction p,
+.Memory p,
+.Verbal p,
+.Visual p{
+    display: inline-block;
+}
+.Reaction{
+    color: var(--Light-red);
+    background-color: hsla(0, 100%, 67%, 0.07);
+    animation-delay:5.5s ;
+    animation-fill-mode:backwards;
+}
+.Memory{
+    color: var(--Orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 0.07);
+    animation-delay: 4.5s;
+    animation-fill-mode:backwards;
+}
+.Verbal{
+    color: var(--Green-teal);
+    background-color: hsla(166, 100%, 37%,0.07);
+    animation-delay:3.5s ;
+    animation-fill-mode:backwards;
+}
+.Visual{
+    color: var(--Cobalt-blue);
+    background-color: hsla(234, 85%, 45%,0.07);
+     animation-delay: 2.5s ;
+     animation-fill-mode:backwards;
+}
+.one{
+    color: var(--Dark-gray-blue);
+    display: inline;
+ }
+ .tow{
+    color:  hsla(224, 30%, 27%, 0.596) ;
+    display: inline;
+ }
+.btn{
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    border-radius: 25px;
+    border: none;
+    margin-top: 42px;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 17px;
+    animation-fill-mode: backwards; 
+}
+.btn:hover{
+    background-image:
+    linear-gradient(to bottom ,
+    var(--Light-slate-blue-background )5%,
+    var(--Light-royal-blue-background ) );
+}
+.btn:active{
+    background-image:
+    linear-gradient(to bottom ,
+    hsla(252, 100%, 67%, 0.747),
+    hsla(241, 81%, 54%, 0.705) );
+}
+.icon{
+    vertical-align: middle;
+}
+.result-card{
+    height: inherit;
+    background-image:
+    linear-gradient(to bottom ,
+    var(--Light-slate-blue-background )5%,
+    var(--Light-royal-blue-background ) );
+    color: hsla(241, 100%, 89%, 0.788);
+    text-align: center;
+    padding: 30px;
+    width: 335px;
+    border-radius: 23px;
+    grid-column: 1/span 1; 
+    grid-row:1/span 6 ;
+    margin: -29px;
+    animation: desktop-result-card-an 3s ease-in-out;
+    animation-fill-mode: backwards;
+}
+.result-card-title{
+    font-size: 25px;
+    padding-bottom: 22px;
+}
+.result-circle{
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(to bottom,
+    var(--Violet-blue-circle) 25% ,
+    var(--Persian-blue-circle)  );
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result-circle p{
+    width: fit-content;
+}
+.result-circle .result-number{
+    color: var(--White);
+    font-size: 60px;
+    font-weight: 700;
+}
+.great{
+    color: var(--White);
+    padding: 23px 0;
+}
+.result-card-paragraph{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 18px;
+animation: desktop-attribution-an 5s ease-in-out 10s;
+animation-fill-mode: backwards;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+    /* Tablit size */
+
+@media only screen and (max-width:750px) and (min-width:510px)  {
+
+    .detailes-card{
+    grid-template-columns: 235px 202px;
+    }
+    .container{
+        min-height: 90vh;
+    }
+    .result-card{
+    width: 255px;
+    }
+.Reaction, .Memory, .Verbal, .Visual, .btn{
+margin-left: 10px;
+}
+.result-card-paragraph {
+    font-size: 17px;
+}
+.detailes-card-title{
+    margin-left: 11px;
+}
+.btn{
+    margin-top: 30px;
+}
+.attribution {
+    margin-top: 45px;
+    padding-bottom: 18px;
+}
+            }
+ /* End of the tablet size */
+
+
+
+    /* Mobile size */
+
+    @media only screen and (max-width:510px){
+    
+        .detailes-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0px;
+            width: 100%;
+            overflow: hidden;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            }
+            .result-card {
+                height: auto;
+                padding: 30px;
+                width: 100%;
+                border-radius: 23px;
+                margin-bottom: 12px;
+                border-bottom-right-radius: 35px;
+                border-bottom-left-radius: 35px;
+  animation: mobile-result-card-an 2s ease-in-out 5.5s;
+  animation-fill-mode: backwards;
+            }
+            .result-card-title {
+                font-size: 25px;
+                padding-top: 20px;
+                padding-bottom: 22px;
+            }
+            .detailes-card-title {
+                padding-bottom: 0px;
+                margin-top: 10px;
+                margin-bottom: 22px;
+ animation:mobile-detailes-card-title-an 2s ease-in-out 6s;
+ animation-fill-mode: backwards;
+            }
+            .p-p{
+                align-self: center;
+            }
+            .icon{
+                padding-right: 5px;
+                align-self: center;
+            }
+            .detailes-card-title,
+            .Reaction,
+            .Memory,
+            .Verbal,
+            .Visual,
+            .btn{
+             width: 85%;
+             padding: 15px 10px;
+             margin-bottom: 15px;
+             border-radius: 8px;
+             font-weight: 700;
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+            }
+            .btn {
+                margin-top: 12px;
+                border-radius: 24px;
+                padding: 17px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 35px;
+            }
+                .Reaction,
+                .Memory,
+                .Verbal, 
+                .Visual{
+            animation: mobile-Reaction-an 3s ease-in-out;
+               }
+               .Reaction{
+                animation-delay:4s ;
+                animation-fill-mode:backwards;
+            }
+            .Memory{
+                animation-delay: 3s;
+                animation-fill-mode:backwards;
+            }
+            .Verbal{
+                animation-delay:2s ;
+                animation-fill-mode:backwards;
+            }
+            .Visual{
+                animation-fill-mode:backwards;
+            }
+            .attribution{
+                margin-top: 35px;
+                padding-bottom: 12px;
+   animation: mobile-attribution-an  2s ease-in-out 7s;
+   animation-fill-mode:backwards;
+
+    }
+    .btn{
+        animation: mobile-btn-an  2s ease-in-out 7s;
+        animation-fill-mode:backwards;
+    }
+      /* End of the Mobile size */  
+    }
+
+    /* Mobile Animations */
+
+    @keyframes mobile-result-card-an {
+
+        0%{
+            translate: 0 -500px;
+        }
+        100%{
+            translate: 0 0;
+        }
+    }
+  
+    @keyframes mobile-detailes-card-title-an {
+        0%{
+            translate: -500px 0;
+        }
+        100%{
+            translate: 0 0;
+        }
+    }
+
+    @keyframes mobile-Reaction-an{
+
+        0%{
+            translate: 0 -1000px;
+
+        }
+        100%{
+            translate: 0 0;
+        }
+    }
+
+    @keyframes mobile-attribution-an {
+        0%{
+            translate: -800px 0;
+        }
+        100%{
+            translate: 0 0;
+        }
+    }
+    
+    @keyframes mobile-btn-an {
+        0%{
+            display: none;
+            translate:0 500px;
+        }
+        100%{
+            display: block;
+            translate: 0 0;
+        }
+    }
+
+
+
+/* Desctop and tablet Animations */
+
+@keyframes  desktop-result-card-an{
+
+    0%{
+        translate: 0 -500px;
+    }
+    100%{
+        translate: 0 0;
+    }
+
+}
+
+
+@keyframes desktop-detailes-card-title-an {
+    0%{
+        translate: 0 -500px ;
+    }
+    100%{
+        translate: 0 0;
+    }
+}
+
+@keyframes decktop-Reaction-an{
+
+    0%{
+        translate: 0 -1000px;
+
+    }
+    100%{
+        translate: 0 0;
+    }
+}
+
+@keyframes desktop-btn-an {
+    0%{
+        translate: 800px 0;
+    }
+    100%{
+        translate: 0 0;
+    }
+}
+
+@keyframes desktop-attribution-an {
+    0%{
+        visibility: hidden;
+        /* translate: 0 500px; */
+    }
+
+    100%{
+        visibility: visible; 
+        /* translate: 0 0; */
+    }
+}
+
+/*   */
